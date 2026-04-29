@@ -1,0 +1,284 @@
+1.1 INTRODUCTION
+In today’s fast-paced environment, individuals increasingly struggle to balance demanding professional schedules with household maintenance. When essential systems fail—whether a plumbing emergency, a broken appliance, or the need for routine cleaning—the process of securing a trustworthy and skilled professional remains a significant hurdle. Current trends indicate that most consumers still rely on informal referrals, fragmented social media groups, or unverified online listings. Unfortunately, these traditional methods are often characterized by unreliability, a lack of standardized pricing, and inconsistent service quality (De Leon, 2021; Dizon, Reyes, & Tiamzon, 2022).
+
+The digital transformation of the service economy has shifted consumer expectations toward "on-demand" accessibility. In the context of home maintenance, the traditional informal labor system is increasingly unable to meet the demands of modern efficiency. This creates a state of "service friction," where the time spent searching for a provider often exceeds the time required for the repair itself. Furthermore, many skilled laborers possess high technical proficiency but lack the marketing infrastructure to compete in a digital-first economy. By providing a structured mobile platform, this study seeks to transition these "hidden" experts into a formal digital marketplace.
+
+This persistent gap in the local service market inspired the development of HomeFixer: A Mobile-Based Home Service Booking and Management Platform. The project aims to bridge the disconnect between homeowners and skilled local technicians through a centralized, mobile-first ecosystem. By leveraging the ubiquity of smartphones, HomeFixer prioritizes convenience, transparency, and security, offering features such as real-time booking, status tracking, and a verified community-rating system (Mishra, Kumar, & Jha, 2020). To further enhance user experience, the platform integrates an AI-powered chatbot designed specifically for customer support, providing 24/7 assistance and lowering the barrier to entry for users unfamiliar with digital booking interfaces. 
+1.2 BACKGROUND OF THE LOCALE
+The study is centered in the Province of Pampanga, a premier hub of commerce and culture in Central Luzon, Philippines. Widely known as the "Culinary Capital," the province has seen rapid urbanization and a growing population of professionals. As the gateway to Central Luzon and the site of the Clark Freeport Zone, the province has experienced an unprecedented real estate boom. The proliferation of residential subdivisions and condominiums in cities like Angeles, Mabalacat, and San Fernando has created a massive market of homeowners who lack established ties to traditional neighborhood repairmen.
+Unlike older generations who may have lifelong connections to local technicians, this emerging demographic relies on smartphones as their primary tool for problem-solving. While global giants have addressed food and transport in the region, the home service sector remains largely neglected, creating a "digital void." Pampanga is a province where digital adoption is rapidly increasing, with residents already familiar with mobile applications for daily logistics. This "digital readiness" provides a fertile environment for HomeFixer. By focusing on the specific urban-rural mix of Pampanga, the study recognizes that while the technology is global, the solution must be local catering to the Kapampangan values of quality and trust while leveraging the province's high connectivity rates. 
+1.3 STATEMENT OF THE PROBLEM
+
+
+1.3.1 General Problem
+Despite the high mobile connectivity and rapid urbanization within the Province of Pampanga, the local home service sector continues to struggle with a decentralized and unorganized marketplace. Residents and service providers remain dependent on fragmented, informal channels—such as word-of-mouth referrals and unverified social media postings—which lack the structure necessary for reliable commerce. These inefficient methods increase the risk of service delays, lack of pricing transparency, and inconsistent quality of work. Without an integrated and centralized booking system, these challenges lead to a disconnect between household needs and available skilled labor, resulting in reduced reliability and inconvenience for the community.1.3.2 Specific Problem
+1.3.2.1 Lack of a Centralized Platform for Provider Verification and Discovery
+The current environment lacks a formal, trusted method for residents to verify the identity and credibility of home service providers. Without a centralized system, it is difficult to confirm professional qualifications, making the discovery of reliable workers time-consuming and prone to security risks.
+
+1.3.2.2 Inability of Users to Monitor Service Status and Schedules
+Management of home repairs currently relies on manual communication, which often leads to misaligned schedules and "no-show" scenarios. There is no existing means for users to track the real-time status of their bookings or for providers to manage their appointments efficiently, leading to delays and lapses in accountability.
+
+1.3.2.3 Absence of a Transparent Rating and Feedback System
+The absence of a unified tracking system that documents service outcomes and provider performance prevents the community from obtaining accurate information regarding service quality. This lack of transparency limits a provider's ability to build a verifiable reputation and leaves customers with no guarantee of quality.
+
+1.3.2.4 Communication Friction and Lack of 24/7 Support
+Current methods of securing services are restricted by the availability of the provider to answer calls or messages. The lack of an automated support interface means that users often experience long wait times for simple inquiries, creating a barrier to efficient service booking and troubleshooting.  
+1.4 OBJECTIVE OF THE STUDIES
+
+1.4.1 General Objective
+The primary objective of this study is to design, develop, and implement HomeFixer: A Mobile-Based Home Service Booking and Management Platform. The system aims to provide a centralized and automated digital ecosystem for residents and service providers in Pampanga, enabling real-time service monitoring, secure booking management, and improved operational accountability through integrated mobile technology and chatbot-driven support.
+
+1.4.2 Specific Objectives
+1.4.2.1 To Develop a Centralized Provider Verification and Discovery Module
+The study seeks to implement a secure authentication and profile system that allows residents to verify the credentials and identities of local service providers. This objective ensures that only legitimate and vetted professionals can offer services, thereby enhancing community trust and personnel accountability.
+
+1.4.2.2 To Implement a Real-Time Booking and Status Monitoring System
+The goal is to provide a mobile interface that allows users to observe the progress of their service requests in real-time. By providing live updates and automated notifications, the system aims to help management and customers detect delays or scheduling conflicts, improving overall situational awareness and decision-making.
+
+1.4.2.3 To Design a Transparent Service Tracking and Performance Recording System
+This objective involves developing a feature that documents service history, pricing metrics, and provider performance through a community-based rating system. The collected data will serve as a structured reference for evaluating service quality, reviewing past transactions, and supporting transparent operational reports for the platform’s administrators.
+
+1.4.2.4 To Integrate a Chatbot for Automated Customer Support
+To further enhance the user experience, the study aims to incorporate an automated chatbot designed to provide 24/7 assistance. The chatbot will serve to reduce communication friction by answering frequently asked questions, guiding users through the mobile booking flow, and providing immediate troubleshooting for common system inquiries.
+
+1.4.2.5 To Evaluate System Usability through User Acceptance Testing (UAT)
+The final objective is to validate the platform’s effectiveness and user-friendliness with selected residents and service providers in Pampanga. This ensures that the mobile interface is intuitive, functional, and successfully meets the localized needs of the Kapampangan home service market.
+ 
+1.5 THEORETICAL FRAMEWORK
+
+The development of HomeFixer: A Mobile-Based Home Service Booking and Management Platform is anchored in three primary theories: Platform Economy Theory, the Technology Acceptance Model (TAM), and Trust and Reputation Theory. These theories provide the foundation for integrating mobile technology into the local service market, focusing on streamlining transactions, ensuring user adoption, and fostering community trust.
+
+Platform Economy Theory focuses on the role of digital intermediaries in connecting two distinct groups—service providers and consumers—to facilitate efficient exchanges. This theory guides the system’s design as a "two-sided marketplace" that reduces transaction costs and "search friction" in the Pampanga home service sector. By centralizing fragmented services into a single mobile interface, the platform optimizes the matching process between household needs and available local labor.
+
+The Technology Acceptance Model (TAM) supports the system’s objective of ensuring high user adoption by addressing the psychological factors of Perceived Usefulness and Perceived Ease of Use. The theory emphasizes that for a digital solution to be successful, users must find it both beneficial to their daily lives and easy to navigate. By incorporating an automated chatbot for 24/7 support and a simplified booking flow, the system aims to reduce the technical barriers for residents and providers, encouraging a transition from traditional informal methods to digital management.
+
+Trust and Reputation Theory underpins the security and accountability features of the platform. The theory highlights the importance of social cues, such as ratings and verified credentials, in reducing perceived risk during digital transactions. By utilizing a transparent review system and provider verification, the platform ensures that users can make informed decisions based on the collective experiences of the community. This theoretical foundation is essential for building a reliable digital ecosystem where local workers can establish a verifiable professional reputation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.5.1 Conceptual Framework
+Currently, home service operations in the Province of Pampanga are conducted through informal and manual procedures that rely heavily on word-of-mouth and fragmented communication. The process typically begins with a resident seeking a service provider through personal referrals or unverified social media posts. Communication is handled via unstructured phone calls or private messages to check for a provider's availability and pricing. Scheduling is managed manually by the provider, often without a formal recording system, while service completion and payments are documented through handwritten receipts or remained undocumented. This traditional process results in delayed responses, lack of price transparency, and no verifiable record of service quality, making it difficult for residents to find reliable help and for providers to manage their professional reputation in real time. The output of this current "system" consists of unorganized contact lists, verbal agreements, and inconsistent service outcomes that lack any form of digital integration.
+The proposed HomeFixer: A Mobile-Based Home Service Booking and Management Platform replaces these fragmented operations with a centralized, technology-driven process. The system begins by collecting and verifying the digital profiles of skilled service providers and residents through a secure registration module. Once a user identifies a need, the system allows them to browse a digital catalog and book services based on real-time availability. During the booking lifecycle, the platform automatically tracks the status of the request—from "Pending" to "Completed"—providing instant notifications to both parties. To support the user experience, an automated chatbot is integrated to handle customer support inquiries and provide guidance without the need for manual intervention from an administrator. The data is automatically processed to generate digital transaction logs and community-driven ratings. The outputs of this system include verified provider profiles, structured service bookings, and automatically generated digital records of service performance.
+By shifting from informal manual methods to an automated mobile platform, the proposed HomeFixer system significantly improves the efficiency, transparency, and reliability of the local service market. Accurate documentation of every transaction is maintained, immediate assistance is provided through the automated chatbot, and digital reputation records remain easily accessible for future users. This framework demonstrates how integrating mobile automation into provider registration, service booking, and performance reporting transforms the home service landscape of Pampanga into a more professional, efficient, and secure ecosystem.
+.
+
+
+
+
+
+
+
+
+
+
+1.5.2 PARADIGM OF THE STUDY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.5.2.1 Paradigm of the existing system
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.5.2.1 Paradigm of the proposed system
+ 
+1.6 SIGNIFICANCE OF THE STUDY
+
+The study on HomeFixer: A Mobile-Based Home Service Booking and Management Platform is significant as it introduces a centralized approach that supports the local home service sector in improving service delivery and transaction management. The system focuses on professionalizing informal labor, ensuring transparent communication through an automated chatbot, and providing a reliable way for residents to access essential services.
+The Residents or Homeowners benefit from the system by gaining access to a mobile application that provides verified information on local service providers, real-time booking status, and transparent pricing. With the platform, residents can easily find trusted help for household repairs and manage their service requests without relying on unreliable referrals or time-consuming manual searches.
+The Service Providers benefit from the system by establishing a professional digital presence. The platform allows them to showcase their skills, manage their booking schedules efficiently, and build a verifiable reputation through the community rating system. This digital transition helps local workers reach more customers and stabilize their income through better organization.
+The Automated Chatbot serves as a vital support tool for both parties by providing 24/7 assistance. It reduces communication friction by handling common inquiries and guiding users through the system’s features, ensuring that technical support is available even when human administrators are offline.
+The Researchers gain practical insights into the application of mobile development, database management, and automated support systems in a localized marketplace. The study contributes to the academic understanding of how mobile technology can be used to organize informal economies in urbanizing provinces like Pampanga.
+Future Researchers may use the study as a reference to enhance or expand the platform’s functions. Further development may focus on integrating automated payment gateways, expanding the geographical scope beyond Pampanga, or incorporating advanced diagnostics to help users identify specific home repair issues.
+Overall, the study highlights the importance of technology in the home service industry by providing a structured and reliable system for service discovery, booking management, and operational transparency.
+ 
+1.7 SCOPE AND LIMITATION
+
+1.7.1 Scope
+
+The study focuses on the design and development of HomeFixer: A Mobile-Based Home Service Booking and Management Platform, a multi-module system intended for the home service market in Pampanga. The system aims to assist residents in finding verified service providers while enabling workers to manage their bookings efficiently. HomeFixer consists of the Customer Module, the Service Provider Module, and the Administrator Module, which work together to promote a transparent and professionalized service ecosystem.
+
+Customer Module
+The Customer Module functions as the primary interface for residents seeking home maintenance services, accessible through a mobile application. It provides the tools necessary to discover, book, and track services.
+
+The Customer Module incorporates the following key features:
+
+Service Directory – Allows users to browse and search through categorized services such as plumbing, electrical work, and cleaning.
+
+Booking and Scheduling – Enables users to book a service based on provider availability and track the status of their request from "Pending" to "Completed."
+
+Rating and Review System – Provides a platform for users to leave feedback and ratings for providers, ensuring community-driven quality control.
+
+Automated Chatbot Support – Features an automated interface that handles common inquiries, guides users through the booking process, and provides 24/7 technical assistance.
+
+Notification Center – Sends real-time alerts regarding booking confirmations, service status updates, and reminders.
+
+Service Provider Module
+The Service Provider Module is designed for local skilled workers, providing them with a digital platform to manage their professional profiles and daily operations.
+
+The Service Provider Module incorporates the following key features:
+
+Professional Profile Management – Allows providers to showcase their skills, upload certifications for verification, and list their service rates.
+
+Booking Dashboard – Displays all incoming service requests, allowing providers to accept or decline bookings based on their current schedule.
+
+Job History and Analytics – Automatically records completed services and earnings, providing a digital log of their professional performance.
+
+Availability Toggle – Enables providers to update their status (Online/Offline) to manage customer expectations regarding real-time availability.
+
+Administrator Module
+The Administrator Module functions as the control center for the platform, ensuring the security and integrity of the digital marketplace.
+
+The Administrator Module incorporates the following key features:
+
+Verification and Approval – Allows administrators to review government IDs and certifications submitted by providers before granting them access to the platform.
+
+User Management – Provides oversight of both customer and provider accounts to ensure compliance with community guidelines.
+
+System Analytics and Monitoring – Offers a bird's-eye view of all ongoing transactions, chatbot performance, and system health to maintain operational reliability within the province. 
+
+1.7.2 Limitations
+The proposed HomeFixer platform is strictly limited to facilitating services within the categories of Plumbing, Aircon Repair, Electrical Work, and Carpentry. Requests falling outside these specific technical domains are beyond the system’s current operational scope.
+A primary limitation of the platform is the exclusion of digital payment processing. The system follows a Cash on Delivery (COD) model, serving only as a digital ledger to record the agreed-upon price. The platform does not hold, transfer, or process funds; instead, it requires the following manual-to-digital workflow:
+The provider enters the final service fee into the app upon job completion.
+The customer pays the provider in physical cash at the site.
+Both parties must manually confirm the "Paid" status within their respective app modules to close the transaction and generate a digital receipt.
+Furthermore, the system does not provide the materials or spare parts required for repairs (e.g., pipes, refrigerant, or wiring). The procurement of these materials remains a private agreement between the customer and the provider. The platform serves strictly as a monitoring, scheduling, and support tool via the Chatbot, and cannot intervene in physical disputes or provide real-time emergency dispatch.
+
+ 
+1.8 DEFINITION OF TERMS
+
+
+Administrator – Refers to the individual responsible for overseeing the platform’s operations, verifying the credentials of service providers, and managing the overall integrity of the digital marketplace.
+
+Aircon Repair – One of the four core service categories in the platform; it involves the maintenance, cleaning, and troubleshooting of cooling units by specialized technicians.
+
+Automated Chatbot – A software interface integrated into the platform that uses pre-programmed logic to simulate conversation with users, providing 24/7 customer support and navigation assistance without human intervention.
+
+Booking – The digital process by which a customer reserves a specific time slot and date for a service provider to perform household repairs or maintenance.
+
+Carpentry – One of the four core service categories; it refers to the skilled trade of cutting, shaping, and installing building materials during the repair or construction of furniture and wooden structures.
+
+Cash on Delivery (COD) – The primary payment model of the platform where the customer settles the service fee through physical currency directly to the provider upon completion of the task.
+
+Customer – The end-user of the platform who seeks, books, and pays for home maintenance services through the mobile application.
+
+Electrical Work – One of the four core service categories; it involves the installation, repair, and maintenance of electrical wiring, fixtures, and systems within a residential property.
+
+Mobile-Based Platform – An application software designed to run on smartphones or tablets, serving as the digital environment where customers and providers interact.
+
+Plumbing – One of the four core service categories; it pertains to the system of pipes, tanks, and fittings required for the water supply, heating, and sanitation in a household.
+
+Real-Time Monitoring – The ability of the system to provide instantaneous updates on the status of a service request, from the initial booking to the final payment confirmation.
+
+Service Provider – A skilled worker or technician in Pampanga who uses the platform to offer their expertise in plumbing, aircon repair, electrical work, or carpentry to potential customers.
+
+User Acceptance Testing (UAT) – The final phase of the software development process where the HomeFixer app is tested by real users (residents and providers) to ensure it meets their needs and functions correctly in a real-world environment.
+
+Verification – The administrative process of reviewing and confirming a service provider’s identity and professional qualifications through submitted government IDs and certifications. 
+1.9 EXECUTICE SUMMARY
+The home service industry in Pampanga continues to face operational challenges involving service unreliability, lack of pricing transparency, and fragmented communication between residents and skilled workers. Many homeowners struggle to find verified professionals for essential repairs, often relying on unverified social media leads or word-of-mouth referrals that provide no guarantee of quality. Simultaneously, skilled technicians lack a centralized platform to manage their schedules and establish a professional digital reputation, leading to inefficiencies and missed economic opportunities.
+To address these challenges, the researchers developed HomeFixer: A Mobile-Based Home Service Booking and Management Platform, a comprehensive digital ecosystem designed to streamline the discovery and management of household services. The system specifically focuses on four core technical domains: Plumbing, Aircon Repair, Electrical Work, and Carpentry. The platform is composed of specialized modules for Customers, Service Providers, and Administrators, all integrated within a mobile-first environment.
+The system provides real-time booking and scheduling, a transparent community-based rating system, and a digital ledger for transaction history. A key feature of the platform is the automated chatbot, which provides 24/7 customer support by handling common inquiries and guiding users through the booking process. To ensure trust and security, the system includes a verification module for provider credentials. Furthermore, the platform utilizes a Cash on Delivery (COD) payment model, where the system records and confirms the final service fees while the physical exchange of currency occurs directly between the user and the technician.
+
+The study focuses on providing an efficient, technology-based solution that professionalizes the local informal labor market and improves service accessibility for residents in Pampanga. By implementing HomeFixer, both homeowners and service providers gain enhanced visibility over service execution, appointment reliability, and transaction accountability.
+Overall, the system demonstrates the practical application of mobile computing, automated support interfaces, and database management in the localized service economy. HomeFixer contributes to a more organized and reliable home service market by providing a structured booking and monitoring tool that bridges the gap between household needs and skilled local expertise.
+ 
+2.1 RELATED LITERATURE
+
+2.1.1 Foreign Literature
+The Platform Economy: How Digital Platforms Are Transforming the Future of Work (Kenney & Zysman, 2020) — A comprehensive study on how digital intermediaries restructure labor markets by connecting freelancers and service providers directly to consumers, reducing transaction costs and improving market efficiency.
+
+Service Management: Operations, Strategy, and Information Technology (Fitzsimmons & Fitzsimmons, 2023) — An academic volume exploring the integration of information technology in service delivery, emphasizing the importance of automated scheduling and real-time status tracking in maintaining customer satisfaction.
+
+Artificial Intelligence in Service Management (Huang & Rust, 2021) — This research examines the transition from human-to-human service to human-to-machine interaction. It highlights how automated interfaces, such as chatbots, handle routine inquiries and scheduling, allowing the service ecosystem to operate 24/7 without increasing labor costs.
+
+User Experience and Mobile Interface Design for On-Demand Services (Chapter, 2024) — A book chapter exploring how simplified mobile navigation and real-time status tracking are critical for non-professional users. It argues that trust in a digital marketplace is built through interface transparency and immediate feedback loops.
+
+
+
+
+
+2.1.2 Local Literature
+Home Service Marketplace: Digital Transformation — 2024
+Santos, Reyes, and Bautista (2024) discuss the shift from informal referrals to organized digital marketplaces in the Philippines. The study highlights how systematic vetting and mobile booking interfaces professionalize trades like plumbing and electrical work, serving as a direct reference for HomeFixer’s goal of organizing local labor.
+On-Demand Mobile Services in Provincial Areas — 2024
+Garcia and Tolentino (2024) explore the growing reliance on mobile apps for household logistics in provinces like Pampanga. Their research emphasizes that automated chatbots and digital record-keeping are essential for building user trust and operational transparency in local provincial economies.
+The Gig Economy and Informal Labor in the Philippines — 2024
+Macaraig and Lopez (2024) analyze how specialized technicians (carpenters and electricians) use digital tools to stabilize their income. The study concludes that localized mobile applications are the most effective way to connect skilled workers with the emerging middle class in urbanizing regions
+Usability of Chatbots in Philippine E-Commerce — 2023
+Pineda and Mercado (2023) evaluate how Filipino users interact with automated support. Their findings suggest that chatbots using simple, direct language significantly improve booking completion rates among users with limited technical expertise, justifying the inclusion of a chatbot in the platform.
+Consumers Act of the Philippines (RA 7394) This act provides the legal framework for service quality and transparent pricing. It underscores the importance of platforms like HomeFixer in protecting the rights of both homeowners and providers through clear service descriptions and accountability
+Data Privacy Act of 2012 (RA 10173) This law mandates the secure handling of personal information. It serves as the primary guideline for HomeFixer in protecting user profiles, identification documents, and service locations.
+Electronic Commerce Act of 2000 (RA 8792) This act grants legal validity to electronic documents and digital agreements. It ensures that the digital records and service receipts generated by the platform are legally binding, even under a Cash on Delivery (COD) payment model.
+ 
+2.2.1 FOREIGN STUDIES
+Mobile-Based Platforms for On-Demand Home Services
+A study by Kim, J., Lee, S., & Park, H. (2021), titled Optimization of Mobile Platforms for Home Service Labor, examined the application of mobile technology in organizing specialized trades through real-time booking and provider verification. The research highlighted how centralized platforms reduced "search friction" and improved service reliability for homeowners. The study concluded that digital marketplaces promote professional accountability and improve service quality, supporting the goal of HomeFixer in applying similar technology to the local labor market.
+
+Chatbot Integration for Enhancing User Experience in Service Apps
+A study by Fernandes, R., & Gawande, S. (2020), titled The Impact of Automated Support on Service Completion Rates, explored the use of automated chatbot interfaces to guide non-technical users through complex booking flows. The system demonstrated that 24/7 automated assistance significantly reduced user drop-off rates and improved overall satisfaction. These findings reinforce the importance of incorporating a chatbot for troubleshooting and support, aligning with HomeFixer’s approach to improving accessibility for all user types.
+
+2.2.2 LOCAL STUDIES
+Development of a Mobile-Based Home Service Management System
+A capstone project by Dela Cruz, J. M., Santos, K. L., and Ramirez, E. V. (2022), titled Mobile-Based Home Maintenance System (Unpublished undergraduate thesis), focused on creating a platform for residents to find local repairmen. The system was capable of tracking service requests and storing transaction history. The project demonstrated the practicality of using mobile-first solutions to address the lack of service transparency in urbanizing communities, similar to the goals of HomeFixer in providing an organized ecosystem for home repairs.
+
+Integrated Service Provider Verification and Reputation Systems
+Conducted by Reyes, M. P., Flores, A. G., & De Guzman, R. T. (2023), the study Trust-Building in Local Digital Marketplaces (Philippine Journal of Computer Science and Technology, 9(1), 55–65) developed a prototype system that integrated credential verification and community ratings. The study showed that transparent reputation systems significantly improved user trust and the likelihood of repeat bookings. These findings support HomeFixer’s integration of provider verification and ratings as crucial components in enhancing user security and service reliability.
+
+

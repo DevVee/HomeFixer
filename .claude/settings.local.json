@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-expo-app@latest app --template blank-typescript)",
+      "Bash(npx expo *)",
+      "Bash(npx tsc *)",
+      "Bash(npm install *)",
+      "Bash(node -e \"const p=require\\('./package.json'\\); const deps=Object.keys\\({...p.dependencies,...p.devDependencies}\\); const check=['@supabase/supabase-js','expo-notifications','expo-auth-session','expo-crypto','@expo/vector-icons']; check.forEach\\(d => { try { require.resolve\\('./node_modules/'+d\\); console.log\\('OK  '+d\\); } catch { console.log\\('MISSING '+d\\); } }\\);\")",
+      "Bash(node -e \"try{require\\('./node_modules/react-native-url-polyfill'\\);console.log\\('OK'\\)}catch{console.log\\('MISSING'\\)}\")",
+      "mcp__claude_ai_Supabase__list_projects",
+      "mcp__claude_ai_Supabase__list_tables",
+      "Bash(node -e \"require\\('./babel.config.js'\\)\\(require\\('@babel/core'\\)\\)\")",
+      "mcp__claude_ai_Supabase__execute_sql",
+      "mcp__claude_ai_Supabase__get_advisors",
+      "mcp__claude_ai_Supabase__apply_migration",
+      "mcp__claude_ai_Supabase__deploy_edge_function",
+      "Bash(eas init *)",
+      "Bash(eas build *)",
+      "Bash(python3 -c ' *)",
+      "mcp__claude_ai_Supabase__list_edge_functions",
+      "Bash(npx eas-cli *)",
+      "Bash(npx eas *)"
+    ]
+  }
+}
