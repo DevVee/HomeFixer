@@ -142,16 +142,29 @@ CREATE TRIGGER trg_tokens_updated_at    BEFORE UPDATE ON push_tokens FOR EACH RO
 
 -- ── Auto-create profile on signup ───────────────────────────
 CREATE OR REPLACE FUNCTION handle_new_user()
-RETURNS TRIGGER LANGUAGE plpgsql SECURITY DEFINER AS $$
+RETURNS TRIGGER LANGUAGE plpgsql SECURITY DEFINER SET search_path = public AS $$
+DECLARE
+  v_role     TEXT;
+  v_category TEXT;
 BEGIN
+  v_role     := COALESCE(NEW.raw_user_meta_data->>'role', 'customer');
+  v_category := COALESCE(NEW.raw_user_meta_data->>'service_category', 'plumbing');
+
   INSERT INTO profiles (id, email, full_name, role)
   VALUES (
     NEW.id,
     NEW.email,
     COALESCE(NEW.raw_user_meta_data->>'full_name', split_part(NEW.email, '@', 1)),
-    COALESCE(NEW.raw_user_meta_data->>'role', 'customer')
+    v_role
   )
   ON CONFLICT (id) DO NOTHING;
+
+  IF v_role = 'provider' THEN
+    INSERT INTO provider_profiles (user_id, service_category)
+    VALUES (NEW.id, v_category)
+    ON CONFLICT (user_id) DO NOTHING;
+  END IF;
+
   RETURN NEW;
 END;
 $$;
@@ -159,6 +172,7 @@ $$;
 CREATE TRIGGER on_auth_user_created
   AFTER INSERT ON auth.users
   FOR EACH ROW EXECUTE FUNCTION handle_new_user();
+
 
 -- ── Row-Level Security ──────────────────────────────────────
 ALTER TABLE profiles            ENABLE ROW LEVEL SECURITY;
