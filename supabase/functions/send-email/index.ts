@@ -87,6 +87,43 @@ function verificationRejectedHtml(p: Record<string, unknown>) {
     </div>`;
 }
 
+function receiptHtml(p: Record<string, unknown>) {
+  const isProvider = p.role === 'provider';
+  const price      = Number(p.finalPrice ?? 0);
+  const commission = Number(p.commission ?? 0);
+  const net        = Number(p.providerNet ?? 0);
+  return `
+    <div style="font-family:sans-serif;max-width:540px;margin:0 auto;padding:24px;">
+      <h2 style="color:#16A34A;">Transaction Receipt</h2>
+      <p>Hi ${p.recipientName},</p>
+      <p>${isProvider
+        ? `Here is your earnings receipt for the completed job.`
+        : `Thank you for using HomeFixer! Here is your payment receipt.`
+      }</p>
+      <table style="width:100%;border-collapse:collapse;margin:16px 0;border:1px solid #E2E8F0;border-radius:8px;">
+        <tr style="background:#F8FAFC;"><td style="padding:10px;color:#475569;font-weight:600;" colspan="2">Booking Details</td></tr>
+        <tr><td style="padding:8px 10px;color:#475569;">Booking ID</td><td style="padding:8px 10px;font-family:monospace;font-size:13px;">${p.bookingId}</td></tr>
+        <tr style="background:#F8FAFC;"><td style="padding:8px 10px;color:#475569;">Service</td><td style="padding:8px 10px;font-weight:600;">${p.category}</td></tr>
+        <tr><td style="padding:8px 10px;color:#475569;">Customer</td><td style="padding:8px 10px;">${p.customerName}</td></tr>
+        <tr style="background:#F8FAFC;"><td style="padding:8px 10px;color:#475569;">Provider</td><td style="padding:8px 10px;">${p.providerName}</td></tr>
+        <tr><td style="padding:8px 10px;color:#475569;">Date</td><td style="padding:8px 10px;">${p.scheduledDate}</td></tr>
+        <tr style="background:#F8FAFC;"><td style="padding:8px 10px;color:#475569;">Address</td><td style="padding:8px 10px;">${p.address}</td></tr>
+        <tr><td style="padding:8px 10px;color:#475569;">Payment Method</td><td style="padding:8px 10px;text-transform:uppercase;">${p.paymentMethod}</td></tr>
+        ${isProvider ? `
+        <tr style="background:#F0FDF4;"><td style="padding:10px;font-weight:700;color:#15803D;" colspan="2">Earnings Breakdown</td></tr>
+        <tr style="background:#F0FDF4;"><td style="padding:8px 10px;color:#475569;">Service Fee</td><td style="padding:8px 10px;font-weight:600;">₱${price.toLocaleString()}</td></tr>
+        <tr style="background:#F0FDF4;"><td style="padding:8px 10px;color:#DC2626;">Platform Commission (10%)</td><td style="padding:8px 10px;color:#DC2626;font-weight:600;">-₱${commission.toLocaleString()}</td></tr>
+        <tr style="background:#F0FDF4;"><td style="padding:8px 10px;font-weight:700;font-size:16px;color:#15803D;">Your Net Earnings</td><td style="padding:8px 10px;font-weight:800;font-size:16px;color:#15803D;">₱${net.toLocaleString()}</td></tr>
+        ` : `
+        <tr style="background:#F0FDF4;"><td style="padding:10px;font-weight:700;color:#15803D;" colspan="2">Payment Summary</td></tr>
+        <tr style="background:#F0FDF4;"><td style="padding:10px;font-weight:700;font-size:16px;color:#15803D;">Total Paid</td><td style="padding:10px;font-weight:800;font-size:16px;color:#15803D;">₱${price.toLocaleString()}</td></tr>
+        `}
+      </table>
+      <p style="color:#64748B;font-size:12px;">This receipt is your official record of the transaction per RA 8792 (Electronic Commerce Act of the Philippines).</p>
+      <p style="color:#94A3B8;font-size:12px;margin-top:32px;">HomeFixer — Your trusted home service partner</p>
+    </div>`;
+}
+
 function problemReportHtml(p: Record<string, unknown>) {
   return `
     <div style="font-family:sans-serif;max-width:540px;margin:0 auto;padding:24px;">
@@ -110,6 +147,11 @@ function buildEmail(payload: EmailPayload): { subject: string; html: string } {
       return { subject: 'Provider Accepted Your Booking — HomeFixer', html: bookingAcceptedHtml(p) };
     case 'booking_completed':
       return { subject: 'Job Completed — HomeFixer', html: bookingCompletedHtml(p) };
+    case 'receipt':
+      return {
+        subject: `Your ${p.role === 'provider' ? 'Earnings' : 'Payment'} Receipt — HomeFixer`,
+        html: receiptHtml(p),
+      };
     case 'welcome':
       return { subject: `Welcome to HomeFixer, ${p.customerName}!`, html: welcomeHtml(p) };
     case 'verification_approved':

@@ -1,0 +1,30 @@
+good morning po sir @Arvee Avena , ito po yung mga pinapa add po nila
+
+[REVIEWED & PLANNED - 2026-05-06]
+
+Legend: [ ] = pending | [~] = in progress | [x] = done
+
+--- GROUP 1: Quick Wins (wiring existing code) ---
+[x] *google authentication - para maiwasan ang spam  (signInWithGoogle() wired in authService, Google button on Login + Register)
+[x] *Password can be reset into email confirmation  (already wired — LoginScreen calls resetPasswordForEmail)
+[x] *Email authentication before accessing the dashboard  (AppNavigator now blocks unverified users with verify wall + resend)
+[x] Forgot password also working on the email  (same as above — already working)
+
+--- GROUP 2: UI Changes ---
+[x] *The filter button should be working  (Top Rated now sorts by rating instead of strict >=4.5 filter)
+[ ] *the date and time when booking should be drop down style  (already chip-based — good UX, will revisit if client wants modal)
+[x] *add another option in rate of the providers, add the option "open rate"  (toggle in ManageServices, badge on ProviderCard — needs SQL migration run)
+[x] *there should be a add tip option when paying  (tip presets 0/10/15/20%+custom shown in payment card on BookingTrackerScreen, added to total)
+[x] *There's a load out of address that you use like default address that will use and other address that you can choose that already saved.  (saved via AsyncStorage, quick-select chips in BookingFormScreen, label + save toggle, long-press to delete)
+[x] *You can also view the info of the bookings see the receipt etc. and also the info of the worker and user.  (BookingDetailScreen created: provider info, booking info, receipt, actions; history navigates there for completed bookings)
+[x] *There also a question ung sinabi samin paano ung rate...  (ActiveJobScreen now has time-worked input that auto-calculates suggested fee, plus rate policy note explaining minimum 1hr and anti-exploitation guidance)
+
+--- GROUP 3: Medium Features ---
+[x] *when the provider arrived in the location, there should be a notification on the user that he already arrived  (already in ActiveJobScreen — fires on in_progress status)
+[x] *when the transaction already done the user and provider should receive a receipt  (receipt email sent to both on COD confirm and digital payment complete)
+[x] *the location of the user can be pin  (MapPickerModal + mini preview in BookingFormScreen; coords saved to booking; reverseGeocode auto-fills address)
+
+--- GROUP 4: High Complexity ---
+[x] *when the provider should be in a map to just like in grab. or lalamove, can be seen in a map style  (live MapView in BookingTrackerScreen for en_route/in_progress; provider + customer markers; dashed polyline; realtime location updates)
+[x] *the digital payment should be working  (real PayMongo GCash/Maya Sources API — creates source, opens checkout in browser, polls chargeable, captures payment, updates booking to paid)
+[ ] *The admin should be a web not phone

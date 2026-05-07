@@ -1,0 +1,22 @@
+What We Did
+From task.txt — Completed:
+
+Email verification gate — users can't access dashboard until email is confirmed; resend button + "I've confirmed it" flow in AppNavigator
+Filter button fix — "Top Rated" now sorts by rating instead of hard >=4.5 filter that excluded everyone
+Open Rate option — toggle in ManageServicesScreen, amber badge on ProviderCard, SQL migration file created (supabase/add_open_rate.sql — still needs to be run)
+Add tip when paying — preset chips (0/10/15/20%+custom) in BookingTrackerScreen, added to total
+Saved addresses — AsyncStorage chips in BookingFormScreen, label + save toggle, long-press to delete
+View booking info/receipt — new BookingDetailScreen with provider info, receipt, actions
+Time worked + suggested fee — ActiveJobScreen auto-calculates fee from hours worked
+Provider arrived notification — fires on in_progress status change
+Receipt email to both parties — on COD confirm and digital payment complete
+Google Authentication — signInWithGoogle() in authService, Google button on LoginScreen + RegisterScreen (customer only), OAuth profile fallback in AppNavigator
+Still Needs To Be Done
+Task	Notes
+Run SQL migration	Execute supabase/add_open_rate.sql in Supabase SQL Editor
+Test Google auth redirect	Just fixed — add exp://** and homefixer://** to Supabase Redirect URLs
+Date/time dropdown style	Client wants modal/dropdown style instead of chips — skippable if client is okay
+User location pin	Pin on map in BookingFormScreen — needs react-native-maps
+Provider on map (Grab style)	Live map tracking — needs react-native-maps + realtime location updates
+Digital payment (PayMongo)	GCash/Maya real integration — needs live PayMongo keys
+Admin web panel	Separate React web project — biggest remaining task
