@@ -1,5 +1,5 @@
 export const dynamic = 'force-dynamic';
-import { supabase } from '@/lib/supabase';
+import { supabaseServer as supabase } from '@/lib/supabaseServer';
 
 const STATUS_STYLES: Record<string, string> = {
   pending:     'bg-yellow-50 text-yellow-700 border-yellow-200',

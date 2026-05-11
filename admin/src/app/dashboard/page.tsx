@@ -1,5 +1,5 @@
 export const dynamic = 'force-dynamic';
-import { supabase } from '@/lib/supabase';
+import { supabaseServer as supabase } from '@/lib/supabaseServer';
 import {
   Users, Briefcase, BookOpen, DollarSign, TrendingUp, Clock,
   CheckCircle, XCircle,
