@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { supabase } from '@/lib/supabase';
 import { Users, BookOpen, Briefcase, DollarSign, TrendingUp, Clock } from 'lucide-react';
 
